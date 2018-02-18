@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Don't be late</title>
+  
+  <link rel="stylesheet" href="../css/reset.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+  
+   <link rel="stylesheet" href="../css/style.css">
+
+  
+</head>
+
+<body>
+<div style="text-align:center;clear:both">
+
+</div>
+  <div class="tab-wrapper">
+  
+  <ul class="tab-menu">
+    <li class="active">Log in</li>
+    <li>Register</li>
+  
+  </ul>
+  
+  <div class="tab-content">
+	<div class="login">
+    <h1>Don't be Late</h1>
+
+  	<hr>
+
+	<div class="row">
+      <!-- edit form column -->
+        <form class="form-horizontal" role="form" onSubmit="return checkLogin()" id="loginform">
+			<span id="notice"></span>
+          <div class="form-group">
+            <label class="col-lg-3 control-label" >Phone/Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="" id="entity">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label" >Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="" id="pwd">
+            </div>
+          </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+               <input type="reset" class="btn btn-default" value="Reset">
+              <input type="submit" class="btn btn-primary" value="Submit">
+              
+            </div>
+          </div>
+        </form>
+      </div>
+    <div class="container">
+    <h1>Create a new Account</h1>
+
+  	<hr>
+
+	<div class="row">
+      <!-- edit form column -->
+        <form class="form-horizontal" role="form">
+			<div class="form-group">
+            <label class="col-lg-3 ">First name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 ">Last name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+			
+		 <center> <h4>Gender</h4>
+<label>Male</label>
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label>Female</label>
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+  </center>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Phone:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="" >
+            </div>
+          </div>
+		  <div class="form-group">
+            <label class="col-lg-3 control-label">Password:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="password" value="" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password" value="" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+               <input type="reset" class="btn btn-default" value="Reset">
+              <input type="submit" class="btn btn-primary" value="Submit">
+              <span></span>
+            </div>
+          </div>
+        </form>
+      </div>
+ 
+</div>
+    
+  </div><!-- //tab-content -->
+  
+</div><!-- //tab-wrapper -->
+
+
+
+
+  
+  
+</div><!-- //tab-wrapper -->
+  <script src='../js/jquery.min.js'></script>
+	<script  src="../js/formvalid.js"></script>
+    <script  src="../js/index.js"></script>
+
+</body>
+</html>

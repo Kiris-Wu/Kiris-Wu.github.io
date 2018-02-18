@@ -1,0 +1,143 @@
+
+body {
+  background-color: #383838;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #464646;
+}
+
+.tab-wrapper {
+  margin: 60px auto;
+  width: 70%;
+  max-width:500px;
+}
+
+.tab-menu li {
+  position:relative;
+  background-color: #fff;
+  color:#bcbcbc;
+  display: inline-block;
+  padding: 20px 40px;
+  opacity: 0.8;
+  cursor:pointer;
+  z-index:0;
+}
+
+.tab-menu li:hover {
+  color:#464646;
+}
+
+.tab-menu li.active {
+  color:#464646;
+  opacity: 1;
+}
+
+.tab-menu li.active:hover {
+  color:#464646;
+}
+
+.tab-content>div {
+  background-color: #fff;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 50px;   
+  min-height:200px;
+}
+
+.line {
+  position:absolute;
+  width: 0;
+  height: 7px;
+  background-color: aqua;
+  top: 0;
+  left: 0;
+}
+
+.container{
+    width:50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0;
+    border: 3px solid #0F3B75;
+    height: 90vh;
+}
+.login{
+    width:50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0;
+    border: 3px solid #0F3B75;
+    height: 45vh;
+
+}
+.col-lg-3
+{
+	text-align:right;
+}
+
+.button{
+    border: none;
+    color: #0F3B75;
+    padding: 10;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+edit user profile template    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* MC/UP */
+.commitment{
+	width:50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0;
+    border: 3px solid #0F3B75;
+    height: 90vh;
+}
+
+.profile{
+	width:50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0;
+    border: 3px solid #0F3B75;
+    height: 90vh;
+}
+.profile img{
+	border-radius:50%;
+	width:80px;
+	height:80px;
+}
+
