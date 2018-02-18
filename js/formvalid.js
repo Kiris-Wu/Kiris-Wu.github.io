@@ -1,5 +1,3 @@
-var UserNameFirst = ["Eclair","Prompto"];
-var UserNameLast = ["Farron","Argentum"];
 var Password = ["finalfantasy@13","15@finalfantasy"];
 var Phone = ["7733720406","3720406773"];
 var Email = ["Lightning@gmail.com","Chocobo@gmail.com"];
@@ -46,3 +44,20 @@ function checkLogin(){
 	
   
   } 
+  function checkConpwd(){
+	  var Confirm = document.getElementById('confirm').value; 
+	  var Regpwd = document.getElementById('regpwd').value; 
+	  var notice=document.getElementById('Connoti');
+	  if(Confirm!=Regpwd)
+	  {
+		  notice.innerHTML="Password and Confirm Password are inconsistent!";
+		  notice.style.color="#DC143C";
+		  return false;
+	  }
+	  else
+	  {
+		   notice.innerHTML="Successful Confirmation!";
+		   return true;
+	  }
+	  
+  }
