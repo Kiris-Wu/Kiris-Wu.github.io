@@ -150,7 +150,11 @@ function checkLogin(){
 		  alert("You have created your account! Now redirecting...");
 		  var form=document.getElementById('Regform');
 		  form.action="main.html";
-		  return True;
+		  return true;
+	  }
+	  else
+	  {
+		  return false;
 	  }
 	  
   }
