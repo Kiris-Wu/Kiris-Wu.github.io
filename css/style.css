@@ -54,20 +54,20 @@ body {
 }
 
 .container{
-    width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    border: 3px solid #0F3B75;
-    height: 110vh;
+  width:50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  border: 3px solid #0F3B75;
+  height: 110vh;
 }
 .login{
-    width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    border: 3px solid #0F3B75;
-    height: 45vh;
+  width:50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  border: 3px solid #0F3B75;
+  height: 45vh;
 
 }
 .col-lg-3
@@ -76,18 +76,18 @@ body {
 }
 
 .button{
-    border: none;
-    color: #0F3B75;
-    padding: 10;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  border: none;
+  color: #0F3B75;
+  padding: 10;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 
@@ -95,22 +95,15 @@ body {
 
 
 /* MC/UP */
-.commitment{
-	width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    /*border: 3px solid #0F3B75;*/
-    height: 90vh;
-}
+
 
 .profile{
 	width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    /*border: 3px solid #0F3B75;*/
-    height: 90vh;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  /*border: 3px solid #0F3B75;*/
+  height: 80vh;
 }
 .profile img{
 	border-radius:50%;
@@ -136,4 +129,32 @@ body {
   /*margin: auto;*/
   text-align: center;
   width: 49%;
+  font-size: 16px;
+}
+
+
+/* Commitment Page */
+
+.commitment{
+  width:50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  /*border: 3px solid #0F3B75;*/
+  height: 80vh;
+  position: relative;
+
+}
+
+.button-bar {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
+
+}
+
+.button-art {
+  height: 40px;
+  text-align: right;
 }
