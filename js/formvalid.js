@@ -3,6 +3,8 @@ var Password = ["finalfantasy@13","15@finalfantasy"];
 var Phone = ["7733720406","3720406773"];
 var Email = ["Lightning@gmail.com","Chocobo@gmail.com"];
 var Userid=["u01,u02"];
+var ReminderNub=[3,2];
+var Sleeptime=[8,7];
 function checkLogin(){ 
   var entity = document.getElementById('entity').value; 
   var pwd = document.getElementById('pwd').value; 
@@ -11,10 +13,12 @@ function checkLogin(){
 	  indexN=Email.indexOf(entity);
 	  if(indexN!=-1&&pwd==Password[indexN])
 	  {
-		  
+		  localStorage.setItem("username",Username[indexN]);
+		  localStorage.setItem("remindernub",ReminderNub[indexN]);
+		  localStorage.setItem("sleeptime",Sleeptime[indexN]);
 		  var form=document.getElementById('loginform');
 		  form.action="main.html";
-		  localStorage.setItem("username",Username[indexN]);
+		  
 		  return true;
 	  }
 	  else
@@ -31,6 +35,9 @@ function checkLogin(){
 	  indexN=Phone.indexOf(entity);
 	  if(indexN!=-1&&pwd==Password[indexN])
 	  {
+		  localStorage.setItem("username",Username[indexN]);
+		  localStorage.setItem("remindernub",ReminderNub[indexN]);
+		  localStorage.setItem("sleeptime",Sleeptime[indexN]);
 		  var form=document.getElementById('loginform');
 		  form.action="main.html";
 		  return true;
@@ -147,6 +154,8 @@ function checkLogin(){
 	      Userid.push("u"+"0"+Userid.length);
 		  len=Userid.length;
 		  localStorage.setItem("username",Username[len]);
+		  localStorage.setItem("remindernub",0);
+		  localStorage.setItem("sleeptime",0);
 		  alert("You have created your account! Now redirecting...");
 		  var form=document.getElementById('Regform');
 		  form.action="main.html";
