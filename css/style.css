@@ -12,6 +12,11 @@ body {
   max-width:500px;
 }
 
+.tab-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
 .tab-menu li {
   position:relative;
   background-color: #fff;
@@ -21,6 +26,10 @@ body {
   opacity: 0.8;
   cursor:pointer;
   z-index:0;
+
+  text-align: center;
+  width: 49%;
+  font-size: 16px;
 }
 
 .tab-menu li:hover {
@@ -119,19 +128,6 @@ body {
 	font-size:20px;
 }
 
-.tab-menu{
-  display: flex;
-  justify-content: space-between;
-}
-
-.tab-menu li{
-
-  /*margin: auto;*/
-  text-align: center;
-  width: 49%;
-  font-size: 16px;
-}
-
 
 /* Commitment Page */
 
@@ -157,4 +153,52 @@ body {
 .button-art {
   height: 40px;
   text-align: right;
+}
+
+
+
+/* Form Page */
+
+.form-wrapper {
+  margin: 60px auto;
+  width: 70%;
+  max-width:500px;
+}
+
+.form-menu{
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+.form-menu li {
+  position:relative;
+  background-color: white;
+  color:#bcbcbc;
+  /*display: inline-block;*/
+  padding: 20px 40px;
+  /*opacity: 0.8;*/
+  cursor:pointer;
+  z-index:0;
+
+  text-align: center;
+  width: 50%;
+  font-size: 16px;
+}
+
+.form-menu li:hover {
+  color:#464646;
+}
+
+.form-content {
+  background-color: #fff;
+  box-sizing:border-box;
+  width: 100%;
+  /*padding: 50px;   */
+  min-height:600px;
+}
+
+.form-control {
+  left: 25%;
+  width: 50%;
+  position:relative;
 }
