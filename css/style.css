@@ -12,6 +12,11 @@ body {
   max-width:500px;
 }
 
+.tab-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
 .tab-menu li {
   position:relative;
   background-color: #fff;
@@ -21,6 +26,10 @@ body {
   opacity: 0.8;
   cursor:pointer;
   z-index:0;
+
+  text-align: center;
+  width: 49%;
+  font-size: 16px;
 }
 
 .tab-menu li:hover {
@@ -54,20 +63,29 @@ body {
 }
 
 .container{
+<<<<<<< HEAD
     width:50%;
     margin: auto;
     margin-top: 30px;
     padding: 0;
     border: 3px solid #0F3B75;
     height: 130vh;
+=======
+  width:50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  border: 3px solid #0F3B75;
+  height: 110vh;
+>>>>>>> ee115c5083b028aa366b7110ec00ac9c409e9a1e
 }
 .login{
-    width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    border: 3px solid #0F3B75;
-    height: 45vh;
+  width:50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  border: 3px solid #0F3B75;
+  height: 45vh;
 
 }
 .col-lg-3
@@ -76,18 +94,18 @@ body {
 }
 
 .button{
-    border: none;
-    color: #0F3B75;
-    padding: 10;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  border: none;
+  color: #0F3B75;
+  padding: 10;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 
@@ -96,22 +114,15 @@ body {
 
 
 /* MC/UP */
-.commitment{
-	width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    border: 3px solid #0F3B75;
-    height: 90vh;
-}
+
 
 .profile{
 	width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    border: 3px solid #0F3B75;
-    height: 90vh;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  /*border: 3px solid #0F3B75;*/
+  height: 80vh;
 }
 .profile img{
 	border-radius:50%;
@@ -128,3 +139,77 @@ body {
 	font-size:20px;
 }
 
+
+/* Commitment Page */
+
+.commitment{
+  width:50%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+  /*border: 3px solid #0F3B75;*/
+  height: 80vh;
+  position: relative;
+
+}
+
+.button-bar {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
+
+}
+
+.button-art {
+  height: 40px;
+  text-align: right;
+}
+
+
+
+/* Form Page */
+
+.form-wrapper {
+  margin: 60px auto;
+  width: 70%;
+  max-width:500px;
+}
+
+.form-menu{
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+.form-menu li {
+  position:relative;
+  background-color: white;
+  color:#bcbcbc;
+  /*display: inline-block;*/
+  padding: 20px 40px;
+  /*opacity: 0.8;*/
+  cursor:pointer;
+  z-index:0;
+
+  text-align: center;
+  width: 50%;
+  font-size: 16px;
+}
+
+.form-menu li:hover {
+  color:#464646;
+}
+
+.form-content {
+  background-color: #fff;
+  box-sizing:border-box;
+  width: 100%;
+  /*padding: 50px;   */
+  min-height:600px;
+}
+
+.form-control {
+  left: 25%;
+  width: 50%;
+  position:relative;
+}
