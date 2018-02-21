@@ -1,5 +1,5 @@
 var Username=["Farron","Prompto"];
-var Password = ["finalfantasy@13","15@finalfantasy"];
+var Password = ["finalfantasy13","15finalfantasy"];
 var Phone = ["7733720406","3720406773"];
 var Email = ["Lightning@gmail.com","Chocobo@gmail.com"];
 var Userid=["u01,u02"];
@@ -63,11 +63,13 @@ function checkLogin(){
 	  {
 		  notice.innerHTML="Password and Confirm Password are inconsistent!";
 		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
 		   notice.innerHTML="Successful Confirmation!";
+		   notice.removeAttribute("hidden");
 		   return true;
 	  }
 	  
@@ -80,11 +82,13 @@ function checkLogin(){
 	  {
 		  notice.innerHTML="Invalid Email address!";
 		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
 		  notice.innerHTML="valid Email address!";
+		  notice.removeAttribute("hidden");
 		   return true;
 	  }
 
@@ -98,11 +102,13 @@ function checkLogin(){
 	  {
 		  notice.innerHTML="Invalid Password!";
 		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
 		  notice.innerHTML="valid Password!";
+		  notice.removeAttribute("hidden");
 		   return true;
 	  }
 	  
@@ -115,11 +121,13 @@ function checkLogin(){
 	  {
 		  notice.innerHTML="Invalid Phone numbers!";
 		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
 		  notice.innerHTML="valid Phone numbers!";
+		  notice.removeAttribute("hidden");
 		   return true;
 	  }
 
@@ -134,11 +142,13 @@ function checkLogin(){
 	  {
 		  notice.innerHTML="Invalid Nickname!";
 		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
 		  notice.innerHTML="valid Nickname!";
+		  notice.removeAttribute("hidden");
 		   return true;
 	  }
 

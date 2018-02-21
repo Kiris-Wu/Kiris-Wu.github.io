@@ -74,28 +74,32 @@
             <label class="col-lg-3 control-label">Nickname:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" value="" maxlength="10" onkeyup="return checkName()" id="regName">
-			  <label class="noti" id="Namenoti">You could set any names you like using alphanumeric characters, single hyphens or digitals, with the max length of 10 and min of 3.<br/><br/></label>
+				<label class="noti" id="Namenoti" hidden></label>
+			  <label class="noti" >You could set any names you like using alphanumeric characters, single hyphens or digitals, with the max length of 10 and min of 3.<br/><br/></label>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Phone:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" value="" maxlength="10" onkeyup="return checkPne()" id="regPne">
-			  <label class="noti" id="Pnenoti">Please input valid phone numbers. We'll send your messages or phone-call as reminders. We'll never share your phone numbers with anyone.<br/><br/></label>
+			  <label class="noti" id="Pnenoti" hidden></label>
+			  <label class="noti">Please input valid phone numbers. We'll send your messages or phone-call as reminders. We'll never share your phone numbers with anyone.<br/><br/></label>
             </div>
           </div>
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" value="" onkeyup="return checkEmail()" id="regEmail" maxlength="35">
-				<label class="noti" id="Emailnoti">Please input valid address. We'll send your notifications to this inbox. We'll never share your email address with anyone.<br/><br/></label>
+				<label class="noti" id="Emailnoti" hidden></label>
+				<label class="noti">Please input valid address. We'll send your notifications to this inbox. We'll never share your email address with anyone.<br/><br/></label>
             </div>
           </div>
 		  <div class="form-group">
             <label class="col-lg-3 control-label">Password:</label>
             <div class="col-lg-8">
               <input class="form-control" type="password" value="" id="regpwd" onkeyup="return checkPwd()" maxlength="40">
-				<label class="noti" id="Pwdnoti">Password should contain alphanumeric characters, single hyphens and digitals with the max length of 40 and min of 6.<br/><br/></label>
+				<label class="noti" id="Pwdnoti" hidden></label>
+				<label class="noti">Password should contain alphanumeric characters, single hyphens and digitals with the max length of 40 and min of 6.<br/><br/></label>
             </div>
 				
           </div>
@@ -103,7 +107,8 @@
             <label class="col-md-3 control-label">Confirm:</label>
             <div class="col-md-8">
               <input class="form-control" type="password" value="" id="confirm" onkeyup="return checkConpwd()" maxlength="40">
-				<label class="noti" id="Connoti">Please confirm your password.<br/><br/></label>
+				<label class="noti" id="Connoti" hidden></label>
+				<label class="noti">Please confirm your password.<br/><br/></label>
             </div>
 				
           </div>

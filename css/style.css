@@ -59,7 +59,7 @@ body {
     margin-top: 30px;
     padding: 0;
     border: 3px solid #0F3B75;
-    height: 110vh;
+    height: 130vh;
 }
 .login{
     width:50%;
@@ -94,6 +94,7 @@ body {
 
 
 
+
 /* MC/UP */
 .commitment{
 	width:50%;
@@ -122,6 +123,7 @@ body {
 	color:	#808080;
 	font-weight:normal;
 }
+
 .welcome{
 	font-size:20px;
 }
