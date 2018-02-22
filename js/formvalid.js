@@ -173,6 +173,7 @@ function checkLogin(){
 	  }
 	  else
 	  {
+		  alert("There are some errors on the form, please check with the notices!");
 		  return false;
 	  }
 	  
