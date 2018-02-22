@@ -5,6 +5,9 @@ body {
   line-height: 1.5;
   color: #464646;
 }
+input[type=text]{width:200px;}
+input[type=password]{width:200px;}
+
 
 .tab-wrapper {
   margin: 60px auto;
@@ -14,7 +17,7 @@ body {
 
 .tab-menu{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
 }
 
 .tab-menu li {
@@ -49,7 +52,7 @@ body {
   background-color: #fff;
   box-sizing:border-box;
   width: 100%;
-  padding: 50px;   
+  padding: 50px 80px;   
   min-height:200px;
 }
 
@@ -63,21 +66,14 @@ body {
 }
 
 .container{
-<<<<<<< HEAD
-    width:50%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0;
-    border: 3px solid #0F3B75;
-    height: 130vh;
-=======
+
   width:50%;
-  margin: auto;
+  margin: 30px 10px;
   margin-top: 30px;
-  padding: 0;
+  padding-left:0px;
   border: 3px solid #0F3B75;
-  height: 110vh;
->>>>>>> ee115c5083b028aa366b7110ec00ac9c409e9a1e
+  height: 140vh;
+
 }
 .login{
   width:50%;
@@ -90,7 +86,12 @@ body {
 }
 .col-lg-3
 {
+	padding-left:50px;
 	align-items:right;
+	
+}
+.col-lg-8{
+	padding-left:0px;
 }
 
 .button{
@@ -107,6 +108,8 @@ body {
 .container:hover input ~ .checkmark {
   background-color: #ccc;
 }
+
+
 
 
 
@@ -133,6 +136,7 @@ body {
 	font-size:10px;
 	color:	#808080;
 	font-weight:normal;
+	padding-left:60px;
 }
 
 .welcome{

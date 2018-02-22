@@ -61,7 +61,7 @@ function checkLogin(){
 	  var notice=document.getElementById('Connoti');
 	  if(Confirm!=Regpwd)
 	  {
-		  notice.innerHTML="Password and Confirm Password are inconsistent!";
+		  notice.innerHTML="Password and Confirm are inconsistent!";
 		  notice.style.color="#DC143C";
 		  notice.removeAttribute("hidden");
 		  return false;
