@@ -96,7 +96,7 @@ function checkLogin(){
   }
   function checkPwd(){
 	  var pwd = document.getElementById('regpwd').value; 
-	  var regex = /^(?=.{6,40})(?=.*[a-zA-Z])(?=.*[_])(?=.*\d).*$/;
+	  var regex = /^\S{6,40}$/;
 	  var notice=document.getElementById('Pwdnoti');
 	  if (!regex.test(pwd))
 	  {
@@ -136,7 +136,7 @@ function checkLogin(){
   
   function checkName(){
 	  var name = document.getElementById('regName').value; 
-	  var regex = /^[a-zA-Z0-9_]{3,10}$/; 
+	  var regex = /^[a-zA-Z0-9_-]{3,10}$/; 
 	  var notice=document.getElementById('Namenoti');
 	  if (!regex.test(name))
 	  {
