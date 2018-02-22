@@ -67,6 +67,7 @@ input[type=password]{width:200px;}
 
 .container{
 
+<<<<<<< HEAD
   width:50%;
   margin: 30px 10px;
   margin-top: 30px;
@@ -74,6 +75,14 @@ input[type=password]{width:200px;}
   border: 3px solid #0F3B75;
   height: 140vh;
 
+=======
+    width:50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0;
+    border: 3px solid #0F3B75;
+    height: 110vh;
+>>>>>>> 87ac9e78a116e5cd479bfdb91729283ca732916e
 }
 .login{
   width:50%;
@@ -204,16 +213,31 @@ input[type=password]{width:200px;}
   color:#464646;
 }
 
+
+
 .form-content {
-  background-color: #fff;
-  box-sizing:border-box;
-  width: 100%;
-  /*padding: 50px;   */
-  min-height:600px;
+  position: relative;
+  /*margin-right:10%;*/
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10%;
+  /*margin-top: 10%;*/
 }
 
-.form-control {
-  left: 25%;
-  width: 50%;
-  position:relative;
+.form-group {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  /*padding-right: 60%;*/
+}
+
+.outer {
+    background-color: #fff;
+  box-sizing:border-box;
+    /*width: 100%;*/
+  /*padding: 50px;   */
+  min-height:600px;
+  margin-top: 30px;
+  position: relative;
+  /*margin: 0 auto;*/
+  /*margin-left: 10%;*/
 }
