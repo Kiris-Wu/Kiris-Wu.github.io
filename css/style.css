@@ -244,7 +244,7 @@ height:100%;
 }
 
 .mc-form {
-  font-size: 300%;
+  font-size: 400%;
 }
 
 .form-group label{
@@ -269,5 +269,5 @@ height:100%;
 #time {
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 300%;
+  font-size: 400%;
 }
