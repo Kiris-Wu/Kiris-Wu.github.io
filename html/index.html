@@ -14,9 +14,9 @@
 </head>
 
 <body>
-<div style="text-align:center;clear:both">
+<!-- <div style="text-align:center;clear:both">
 
-</div>
+</div> -->
   <div class="tab-wrapper">
   
   <ul class="tab-menu">
@@ -37,7 +37,7 @@
         <form class="form-horizontal" role="form" onSubmit="return checkLogin()" id="loginform">
 			<span id="notice"></span>
           <div class="form-group">
-            <label class="col-lg-3 control-label" >Phone/Email:</label>
+            <label class="col-lg-8 control-label" >Phone/Email:</label>
             <div class="col-lg-8">
               <input class="form-control" type="text" value="" id="entity" maxlength="35">
             </div>
@@ -75,7 +75,7 @@
             <div class="col-lg-8">
               <input class="form-control" type="text" value="" maxlength="10" onkeyup="return checkName()" id="regName">
 				<label class="noti" id="Namenoti" hidden></label>
-			  <label class="noti" >You could set any names you like using alphanumeric characters, single hyphens or digitals, with the max length of 10 and min of 3.<br/><br/></label>
+			  <label class="noti" >Nicknames have a max length of 10 and min of 3<br/><br/></label>
             </div>
           </div>
           <div class="form-group">
@@ -83,7 +83,7 @@
             <div class="col-lg-8">
               <input class="form-control" type="text" value="" maxlength="10" onkeyup="return checkPne()" id="regPne">
 			  <label class="noti" id="Pnenoti" hidden></label>
-			  <label class="noti">Please input valid phone numbers. We'll send your messages or phone-call as reminders. We'll never share your phone numbers with anyone.<br/><br/></label>
+			  <label class="noti">We will send your messages or phone-call as reminders. We will never share your phone numbers<br/><br/></label>
             </div>
           </div>
           <div class="form-group">
@@ -91,7 +91,7 @@
             <div class="col-lg-8">
               <input class="form-control" type="text" value="" onkeyup="return checkEmail()" id="regEmail" maxlength="35">
 				<label class="noti" id="Emailnoti" hidden></label>
-				<label class="noti">Please input valid address. We'll send your notifications to this inbox. We'll never share your email address with anyone.<br/><br/></label>
+				<label class="noti">We will never share your email address<br/><br/></label>
             </div>
           </div>
 		  <div class="form-group">
@@ -99,7 +99,7 @@
             <div class="col-lg-8">
               <input class="form-control" type="password" value="" id="regpwd" onkeyup="return checkPwd()" maxlength="40">
 				<label class="noti" id="Pwdnoti" hidden></label>
-				<label class="noti">Password should be in max length of 40 and min of 6.<br/><br/></label>
+				<label class="noti">Passwords have a max length of 40 and min of 6.<br/><br/></label>
             </div>
 				
           </div>

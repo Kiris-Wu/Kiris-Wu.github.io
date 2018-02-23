@@ -1,15 +1,23 @@
 
 body {
-  background-color: #383838;
+  /*background-color: #383838;*/
   font-family: Arial, sans-serif;
   line-height: 1.5;
   color: #464646;
 }
 
+h1 {
+  text-align: center;
+  font-size: 600%;
+  width: 700px;
+  position: relative;
+  left: 120px;
+}
+
 .tab-wrapper {
-  margin: 60px auto;
-  width: 70%;
-  max-width:500px;
+  /*margin: 60px auto;*/
+  /*width: 70%;*/
+  /*max-width:500px;*/
 }
 
 .tab-menu{
@@ -22,14 +30,14 @@ body {
   background-color: #fff;
   color:#bcbcbc;
   display: inline-block;
-  padding: 20px 40px;
+  /*padding: 20px 40px;*/
   opacity: 0.8;
   cursor:pointer;
   z-index:0;
 
   text-align: center;
   width: 49%;
-  font-size: 16px;
+  font-size: 420%;
 }
 
 .tab-menu li:hover {
@@ -49,14 +57,14 @@ body {
   background-color: #fff;
   box-sizing:border-box;
   width: 100%;
-  padding: 50px;   
-  min-height:200px;
+  padding: 5%;   
+  min-height:420%;
 }
 
 .line {
   position:absolute;
   width: 0;
-  height: 7px;
+  height: 5%;
   background-color: aqua;
   top: 0;
   left: 0;
@@ -66,23 +74,33 @@ body {
 
     width:50%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10%;
     padding: 0;
-    border: 3px solid #0F3B75;
+    border: 2% solid #0F3B75;
     height: 80%;
 }
 .login{
   width:50%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 10%;
   padding: 0;
-  border: 3px solid #0F3B75;
+  border: 2% solid #0F3B75;
   height: 60%;
 
 }
 .col-lg-3
 {
 	align-items:right;
+}
+
+.control-label {
+  font-size: 400%;
+}
+
+.form-control {
+  padding: 40px 50px;
+  line-height: 50px;
+  font-size: 50px;
 }
 
 .button{
@@ -92,7 +110,7 @@ body {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 500%;
 }
 
 /* On mouse-over, add a grey background color */
@@ -111,29 +129,33 @@ body {
 .profile{
 	width:50%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 15%;
   padding: 0;
   /*border: 3px solid #0F3B75;*/
   height: 60%;
 }
 .profile img{
 	border-radius:50%;
-	width:80px;
-	height:80px;
+	width:15%;
+	height:15%;
 }
 .noti{
-	font-size:10px;
+	font-size:400%;
 	color:	#808080;
 	font-weight:normal;
 }
 
 .welcome{
-	font-size:20px;
+	font-size:400%;
 }
 
 #snooze{
-width:300px;
-height:150px;
+width:100%;
+height:100%;
+}
+
+#logout {
+  font-size: 300%;
 }
 
 
@@ -142,7 +164,7 @@ height:150px;
 .commitment{
   width:50%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 15%;
   padding: 0;
   /*border: 3px solid #0F3B75;*/
   height: 80vh;
@@ -159,7 +181,7 @@ height:150px;
 }
 
 .button-art {
-  height: 40px;
+  height: 150px;
   text-align: right;
 }
 
@@ -191,7 +213,7 @@ height:150px;
 
   text-align: center;
   width: 50%;
-  font-size: 16px;
+  font-size: 500%;
 }
 
 .form-menu div:hover {
@@ -210,8 +232,13 @@ height:150px;
 }
 
 .form-group {
+  padding-top: 10%;
+}
+
+.form-group label{
   padding-top: 2%;
   padding-bottom: 2%;
+  /*font-size: 500%;*/
   /*padding-right: 60%;*/
 }
 
@@ -221,7 +248,7 @@ height:150px;
     /*width: 100%;*/
   /*padding: 50px;   */
   min-height:600px;
-  margin-top: 30px;
+  margin-top: 15%;
   position: relative;
   /*margin: 0 auto;*/
   /*margin-left: 10%;*/
