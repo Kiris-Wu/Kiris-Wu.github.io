@@ -64,7 +64,7 @@ h1 {
 .line {
   position:absolute;
   width: 0;
-  height: 5%;
+  height: 10%;
   background-color: aqua;
   top: 0;
   left: 0;
@@ -103,6 +103,12 @@ h1 {
   font-size: 50px;
 }
 
+.btn {
+  height: 150px;
+  width: 400px;
+  font-size: 500%;
+}
+
 .button{
   border: none;
   color: #0F3B75;
@@ -111,6 +117,10 @@ h1 {
   text-decoration: none;
   display: inline-block;
   font-size: 500%;
+}
+
+#forgot-password {
+  font-size: 300%;
 }
 
 /* On mouse-over, add a grey background color */
@@ -187,12 +197,16 @@ height:100%;
 
 
 
+
+
+
+
 /* Form Page */
 
 .form-wrapper {
-  margin: 60px auto;
-  width: 70%;
-  max-width:500px;
+  /*margin: 60px auto;*/
+  /*width: 70%;*/
+  /*max-width:500px;*/
 }
 
 .form-menu{
@@ -207,7 +221,6 @@ height:100%;
   /*display: inline-block;*/
   padding: 20px 40px;
   /*opacity: 0.8;*/
-  border: 1px solid black;
   cursor:pointer;
   z-index:0;
 
@@ -216,23 +229,22 @@ height:100%;
   font-size: 500%;
 }
 
-.form-menu div:hover {
- color:blue;
-}
-
-
-
 .form-content {
   position: relative;
   /*margin-right:10%;*/
   margin-left: 10%;
   margin-right: 10%;
-  padding-top: 10%;
+  /*padding-top: 5%;*/
   /*margin-top: 10%;*/
 }
 
 .form-group {
   padding-top: 10%;
+  /*font-size: 300%;*/
+}
+
+.mc-form {
+  font-size: 300%;
 }
 
 .form-group label{
@@ -243,7 +255,7 @@ height:100%;
 }
 
 .outer {
-    background-color: #fff;
+  background-color: #fff;
   box-sizing:border-box;
     /*width: 100%;*/
   /*padding: 50px;   */
@@ -252,4 +264,10 @@ height:100%;
   position: relative;
   /*margin: 0 auto;*/
   /*margin-left: 10%;*/
+}
+
+#time {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 300%;
 }

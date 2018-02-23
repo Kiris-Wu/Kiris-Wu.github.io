@@ -87,7 +87,7 @@ function checkLogin(){
 	  }
 	  else
 	  {
-		  notice.innerHTML="valid Email address!";
+		  notice.innerHTML="Valid Email address!";
 		  notice.removeAttribute("hidden");
 		   return true;
 	  }
