@@ -20,6 +20,7 @@ window.onload=function(){
 	
 	//drawing graphic
 	drawGraphic();
+	var canvas=document.getElementById("snooze")
 	var ctx = document.getElementById("snooze").getContext("2d");
     mychart = new Chart(ctx).Line(lineChartData,defaults); 
 }
@@ -34,9 +35,25 @@ function logout()
 }
 function drawGraphic()
 {
-	arr2=new Array();  
-	arr2[0]="30";arr2[1]="52";arr2[2]="45";arr2[3]="78";
-	arr2[4]="27";arr2[5]="88";arr2[6]="65";
+	arr2=new Array();
+	if(localStorage.getItem("sleeptime")!="0"&&localStorage.getItem("sleeptime")!="")
+	{
+		var seed=0;
+		for(var i = 0; i < 7;i++)
+	   { 
+		seed=Math.round(Math.random()*10)
+		arr2[i]=5*seed;
+	   }
+	}
+	else
+	{
+		for(var i = 0; i < 7;i++)
+	   { 
+		arr2[i]=0;
+	   }
+	}
+		
+	
 	
 	lineChartData = {  
 //x axis label
@@ -62,27 +79,28 @@ datasets : [
 	defaults = {    
     scaleStartValue :null,     // start y value
     scaleLineColor : "rgba(0,0,0,.1)",    // color for Y/X 
-    scaleLineWidth : 1,        // width for X,Y
+    scaleLineWidth : 3,        // width for X,Y
     scaleShowLabels : true,      
     scaleLabel : "<%=value%>",   
     scaleFontFamily : "'Arial'",   
-    scaleFontSize : 16,         
+    scaleFontSize : 43,         
     scaleFontStyle : "normal",   
     scaleFontColor : "#666",      
     scaleShowGridLines : true,    
     scaleGridLineColor : "rgba(0,0,0,.05)",   
-    scaleGridLineWidth : 2,        
+    scaleGridLineWidth : 4,        
     bezierCurve : false,              
     pointDot : true,              
-    pointDotRadius : 8,          
-    pointDotStrokeWidth : 1,     
+    pointDotRadius : 15,          
+    pointDotStrokeWidth : 3,     
     datasetStroke : true,        
-    datasetStrokeWidth : 2,      
+    datasetStrokeWidth : 4,      
     datasetFill : false,          
     animation : true,             
     animationSteps : 60,             
     animationEasing : "easeOutQuart",    
-    onAnimationComplete : null      
+    onAnimationComplete : null,
+	tooltipFontSize: 40,
     }
 	
 }

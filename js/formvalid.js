@@ -69,6 +69,7 @@ function checkLogin(){
 	  else
 	  {
 		   notice.innerHTML="Successful Confirmation!";
+		   notice.style.color="#32CD32";
 		   notice.removeAttribute("hidden");
 		   return true;
 	  }
@@ -88,6 +89,7 @@ function checkLogin(){
 	  else
 	  {
 		  notice.innerHTML="Valid Email address!";
+		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
 	  }
@@ -108,6 +110,7 @@ function checkLogin(){
 	  else
 	  {
 		  notice.innerHTML="valid Password!";
+		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
 	  }
@@ -127,6 +130,7 @@ function checkLogin(){
 	  else
 	  {
 		  notice.innerHTML="valid Phone numbers!";
+		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
 	  }
@@ -148,6 +152,7 @@ function checkLogin(){
 	  else
 	  {
 		  notice.innerHTML="valid Nickname!";
+		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
 	  }

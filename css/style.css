@@ -139,18 +139,23 @@ h1 {
 .profile{
 	width:50%;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 0;
   padding: 0;
   /*border: 3px solid #0F3B75;*/
-  height: 60%;
+  height: 1500px;
 }
 .profile img{
 	border-radius:50%;
-	width:15%;
+	width:200px;
 	height:15%;
 }
 .noti{
-	font-size:400%;
+	font-size:300%;
+	color:	#808080;
+	font-weight:normal;
+}
+.noti2{
+	font-size:250%;
 	color:	#808080;
 	font-weight:normal;
 }
@@ -159,10 +164,6 @@ h1 {
 	font-size:400%;
 }
 
-#snooze{
-width:100%;
-height:100%;
-}
 
 #logout {
   font-size: 300%;
