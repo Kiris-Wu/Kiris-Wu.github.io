@@ -159,6 +159,9 @@ function checkLogin(){
 
 	  
   }
+ 
+
+  
   function checkReg(){
 	  if(checkName()&&checkPne()&&checkEmail()&&checkPwd()&&checkConpwd())
 	  {
@@ -171,14 +174,18 @@ function checkLogin(){
 		  localStorage.setItem("username",Username[len]);
 		  localStorage.setItem("remindernub",0);
 		  localStorage.setItem("sleeptime",0);
-		  alert("You have created your account! Now redirecting...");
+		  var notice=document.getElementById('regnotice');
+		  notice.innerHTML="You have created your account! Now redirecting...";
+		  notice.style.color="#32CD32";
 		  var form=document.getElementById('Regform');
 		  form.action="main.html";
 		  return true;
 	  }
 	  else
 	  {
-		  alert("There are some errors on the form, please check with the notices!");
+		  var notice=document.getElementById('regnotice');
+		  notice.innerHTML="There are some errors on the form, please check with the notices!";
+		  notice.style.color="#DC143C";
 		  return false;
 	  }
 	  
