@@ -77,7 +77,7 @@ function checkLogin(){
   }
   function checkEmail(){
 	  var email = document.getElementById('regEmail').value; 
-	  var regex = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+	  var regex = /^([0-9A-Za-z\-_\.]+)@([0-9A-Za-z\-_\.]*)([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
 	  var notice=document.getElementById('Emailnoti');
 	  if (!regex.test(email))
 	  {
