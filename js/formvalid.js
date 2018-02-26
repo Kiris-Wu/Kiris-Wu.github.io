@@ -3,8 +3,8 @@ var Password = ["finalfantasy13","15finalfantasy","test123"];
 var Phone = ["7733720406","3720406773","1234567890"];
 var Email = ["Lightning@gmail.com","Chocobo@gmail.com","test@test.com"];
 var Userid=["u01,u02,u03"];
-var ReminderNub=[3,2];
-var Sleeptime=[8,7];
+var ReminderNub=[3,2,0];
+var Sleeptime=[8,7,6];
 function checkLogin(){ 
   var entity = document.getElementById('entity').value; 
   var pwd = document.getElementById('pwd').value; 
@@ -61,7 +61,7 @@ function checkLogin(){
 	  var notice=document.getElementById('Connoti');
 	  if(Confirm!=Regpwd)
 	  {
-		  notice.innerHTML="Password and Confirm are inconsistent!";
+		  notice.innerHTML="Passwords are inconsistent!";
 		  notice.style.color="#DC143C";
 		  notice.removeAttribute("hidden");
 		  return false;
@@ -81,14 +81,14 @@ function checkLogin(){
 	  var notice=document.getElementById('Emailnoti');
 	  if (!regex.test(email))
 	  {
-		  notice.innerHTML="Invalid Email address!";
+		  notice.innerHTML="Invalid Email Address";
 		  notice.style.color="#DC143C";
 		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
-		  notice.innerHTML="Valid Email address!";
+		  notice.innerHTML="Valid Email Address";
 		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
@@ -102,14 +102,14 @@ function checkLogin(){
 	  var notice=document.getElementById('Pwdnoti');
 	  if (!regex.test(pwd))
 	  {
-		  notice.innerHTML="Invalid Password!";
+		  notice.innerHTML="Invalid Password";
 		  notice.style.color="#DC143C";
 		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
-		  notice.innerHTML="valid Password!";
+		  notice.innerHTML="Valid Password";
 		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
@@ -122,14 +122,14 @@ function checkLogin(){
 	  var notice=document.getElementById('Pnenoti');
 	  if (!regex.test(pne))
 	  {
-		  notice.innerHTML="Invalid Phone numbers!";
+		  notice.innerHTML="Invalid Phone Number";
 		  notice.style.color="#DC143C";
 		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
-		  notice.innerHTML="valid Phone numbers!";
+		  notice.innerHTML="Valid Phone Number";
 		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
@@ -144,14 +144,14 @@ function checkLogin(){
 	  var notice=document.getElementById('Namenoti');
 	  if (!regex.test(name))
 	  {
-		  notice.innerHTML="Invalid Nickname!";
+		  notice.innerHTML="Invalid Nickname";
 		  notice.style.color="#DC143C";
 		  notice.removeAttribute("hidden");
 		  return false;
 	  }
 	  else
 	  {
-		  notice.innerHTML="valid Nickname!";
+		  notice.innerHTML="Valid Nickname";
 		  notice.style.color="#32CD32";
 		  notice.removeAttribute("hidden");
 		   return true;
@@ -184,7 +184,7 @@ function checkLogin(){
 	  else
 	  {
 		  var notice=document.getElementById('regnotice');
-		  notice.innerHTML="There are some errors on the form, please check with the notices!";
+		  notice.innerHTML="There are some errors on the form, please check for errors";
 		  notice.style.color="#DC143C";
 		  return false;
 	  }

@@ -41,7 +41,7 @@ function drawGraphic()
 		var seed=0;
 		for(var i = 0; i < 7;i++)
 	   { 
-		seed=Math.round(Math.random()*10)
+		seed=Math.round(Math.random())
 		arr2[i]=5*seed;
 	   }
 	}
@@ -57,7 +57,7 @@ function drawGraphic()
 	
 	lineChartData = {  
 //x axis label
-labels : ["Mon","Tu","Wed","Th","Fri","Sat","Sun"],
+labels : ["Sun","Mon","Tu","Wed","Th","Fri","Sat"],
 datasets : [
     
     {
