@@ -241,7 +241,13 @@ h1 {
 
 .form-group {
   padding-top: 10%;
+  /*text-align: center;*/
   /*font-size: 300%;*/
+}
+
+.morning-group{
+  padding-top: 20%;
+  text-align: center;
 }
 
 .mc-form {
@@ -256,6 +262,7 @@ h1 {
 }
 
 .outer {
+  padding-top:5%;
   background-color: #fff;
   box-sizing:border-box;
     /*width: 100%;*/
