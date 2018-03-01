@@ -1,0 +1,56 @@
+body {
+  /*background-color: #383838;*/
+  font-family: Arial, sans-serif;
+  background-size:200%;
+  background:url(../images/night.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  overflow: hidden;
+  background-size:cover;
+}
+.btncm{
+	margin-left:50px;
+	margin-top:50px;
+	height: 120px;
+	width: 350px;
+	font-size: 400%;
+}
+.alarm{
+	margin-left:350px;
+	margin-top:200px;
+	font-size: 800%;
+	color:#FFF;
+}
+.atime{
+	margin-left:250px;
+	margin-top:100px;
+	font-size: 1500%;
+	color:#FFF;
+	
+}
+.cm{
+	margin-top:30px;
+	text-align:center;
+
+}
+.commit{
+	
+	font-size: 600%;
+	color:#FFF;
+}
+.notice{
+	margin-left:50px;
+	margin-top:50px;
+	font-size: 300%;
+	color:#FFF;
+	
+	
+}
+.btnsn{
+	margin-left:200px;
+	margin-top:100px;
+	height: 120px;
+	width: 550px;
+	font-size: 350%;
+	
+}
