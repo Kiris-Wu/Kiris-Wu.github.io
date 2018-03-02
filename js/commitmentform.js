@@ -1,8 +1,8 @@
 
 function addreminder()
 {
-	var plus=document.getElementById('comm');
-	plus.style.display="none";
+	var comm=document.getElementById('comm');
+	comm.style.display="none";
 	var plus=document.getElementById('plusbtn');
 	plus.style.display="none";
 	var form=document.getElementById('rmdform');
@@ -45,8 +45,8 @@ function saveclick()
 	
 	
 	//exchange display
-	var plus=document.getElementById('comm');
-	plus.style.display="block";
+	var comm=document.getElementById('comm');
+	comm.style.display="block";
 	var plus=document.getElementById('plusbtn');
 	plus.style.display="block";
 	var form=document.getElementById('rmdform');
@@ -58,8 +58,8 @@ function saveclick()
 function cancelclick()
 {
 	//exchange display
-	var plus=document.getElementById('plusbtn');
-	plus.style.display="block";
+	var comm=document.getElementById('comm');
+	comm.style.display="block";
 	var plus=document.getElementById('plusbtn');
 	plus.style.display="block";
 	var form=document.getElementById('rmdform');
