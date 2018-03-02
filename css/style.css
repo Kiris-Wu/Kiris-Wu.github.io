@@ -201,6 +201,19 @@ h1 {
   color: Lavender;
 }
 
+.commitment-button{
+  width: 65px;
+  height: 65px;
+  float: right;
+  border-radius: 50%;
+  background-color: Green;
+  color: white;
+  margin: 14px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
 .commitment-icon{
 	float: right;
 	height: 50%;
