@@ -20,8 +20,8 @@
 	<div class="tab-wrapper">
 
 		<ul class="tab-menu">
-			<li class="active">User Profile</li>
-			<li>Morning Commitment</li>
+			<li class="active" id="tab1">User Profile</li>
+			<li id="tab2">Morning Commitment</li>
 		</ul>
 
 		<div class="tab-content">
@@ -40,13 +40,43 @@
 				
 				<!-- //content shows in the Second Tab -->
 				<div class="commitment"> 
+					<div class="outer" id="rmdform">
+			<div class="form-content">
+				<div class="form-group">
+					<label class="mc-form" for="usr">Morning Commitment:</label>
+					<input type="text" class="form-control" id="usr" placeholder="e.g. Morning Yoga">
+				</div>
+				<div class="form-group">
+					<label class="mc-form" for="usr">Start Time of Commitment:</label>
+					<!-- <input type="text" class="form-control" id="usr"> -->
+					<input id="time" type="time" value="08:00">
+				</div>
+				<div class="form-group">
+					<label class="mc-form" for="usr">Preparation Time (Hours): </label>
+					<input type="number" class="form-control" id="usr" placeholder="1">
+				</div>
+
+
+			</div><!-- //form-content -->
+
+			<div class="morning-group">
+				<label class="col-md-3 control-label"></label>
+				<div class="col-md-8">
+					<input type="reset" class="btn btn-default" value="Cancel" onclick="return cancelclick()">
+					&nbsp&nbsp
+					<input type="submit" class="btn btn-primary" value="Save" onclick="return saveclick()">
+
+				</div>
+			</div>
+		</div>
 					<div class="button-bar">
-						<a href="form.html">
-							<img class="button-art" src="../images/add_button.jpg"/>
-						</a>
+			
+						<img id="plusbtn" class="button-art" src="../images/add_button.jpg" onclick="addreminder()"/>
+						
 					</div>
 
 				</div>
+		
 
 			</div><!-- //tab-content -->
 
@@ -60,6 +90,7 @@
 	<script  src="../js/userprofile.js"></script>
 	<script  src="../js/index.js"></script>
 	<script  src="../js/Chart.js"></script>
+	<script  src="../js/commitmentform.js"></script>
 	
 
 </body>

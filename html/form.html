@@ -19,10 +19,6 @@
 	</div>
 	<div class="form-wrapper">
 
-<!-- 		<ul class="form-menu">
-			<div onclick="location.href='main.html';">Cancel</div>
-			<div onclick="location.href='main.html';">Save</div>
-		</ul> -->
 		<div class="outer">
 			<div class="form-content">
 				<div class="form-group">
@@ -45,9 +41,9 @@
 			<div class="morning-group">
 				<label class="col-md-3 control-label"></label>
 				<div class="col-md-8">
-					<input type="reset" class="btn btn-default" value="Cancel" onclick="location.href='main.html';">
+					<input type="reset" class="btn btn-default" value="Cancel" onclick="return cancelclick()">
 					&nbsp&nbsp
-					<input type="submit" class="btn btn-primary" value="Save" onclick="location.href='main.html';">
+					<input type="submit" class="btn btn-primary" value="Save" onclick="return saveclick()">
 
 				</div>
 			</div>
@@ -63,6 +59,7 @@
 <script  src="../js/formvalid.js"></script>
 <script  src="../js/userprofile.js"></script>
 <script  src="../js/index.js"></script>
+<script  src="../js/commitmentform.js"></script>
 
 </body>
 </html>
