@@ -23,6 +23,12 @@ function saveclick()
 	var comm = document.getElementById("comm");
 	comm.appendChild(newdiv);
 	
+	var button = document.createElement("div");
+	button.className="commitment-button";
+	button.innerHTML="On";
+	button.setAttribute("onClick", "javascript: onoffswitch(this);");
+	newdiv.appendChild(button);
+	
 	var newname = document.createElement("div");
 	newname.className="commitment-name";
 	newname.innerHTML="<b>"+n.value+"</b>";
@@ -55,6 +61,7 @@ function saveclick()
 	
 	
 }
+
 function cancelclick()
 {
 	//exchange display
@@ -64,4 +71,15 @@ function cancelclick()
 	plus.style.display="block";
 	var form=document.getElementById('rmdform');
 	form.style.display="none";
+}
+
+function onoffswitch(elem){
+	if (elem.innerHTML=="On"){
+		elem.innerHTML="Off";
+		elem.style.backgroundColor="Red";
+	}
+	else {
+		elem.innerHTML="On";
+		elem.style.backgroundColor="Green";
+	}
 }
