@@ -27,13 +27,20 @@
 		<div class="tab-content">
 			<!-- //content shows in the first Tab -->
 			<div class="profile">
-				<img src="../images/head_m.jpg"/>&nbsp&nbsp<label id="CurrentUser" class="welcome">Welcome</label>&nbsp&nbsp<a onclick="return logout()" id="logout"><label>Log out</label></a></br>	
+				<img src="../images/head_m.jpg"/>&nbsp&nbsp<label id="CurrentUser" class="welcome">Welcome</label><a onclick="return logout()" id="logout"><br><label class="logout">Log out</label></a></br>	
 				<hr>
 				<div class="info">
-					<label id="ReminderNub" class="welcome"></label><br/><br/><br/>
-					<label id="SleepTime" class="welcome"></label><br/><br/><br/>
-					<label class="welcome">Snooze time Graphic</label><br/>
-					<label class="noti2">Notice: The graphic shows the number of snoozes used each day last week. Click on points for details.</label><br/>
+					<label id="ReminderNub" class="noti3"></label><br/><br/><br/>
+					<label id="SleepTime" class="noti3"></label><select id="sleephour" class="selecth" onchange="changesleep()">
+					<option value="5">5h</option>
+					<option value="6">6h</option>
+					<option value="7">7h</option>
+					<option value="8">8h</option>
+					<option value="9">9h</option>
+					<option value="10">10h</option>
+					</select><br/><br/><br/>
+					<label class="noti4">Snooze-Sleep Graphic</label><br/>
+					<label class="noti2">Notice: The graphic shows the ratio of snooze time to sleep time last week. Click on points for detailed sleep and snooze time.</label><br/>
 					<canvas id="snooze" width="750" height="700"></canvas>
 					</div>
 				</div>

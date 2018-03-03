@@ -1,7 +1,7 @@
 var arr2="";
 var lineChartData="";
 var defaults="";
-
+var sleeptime;
 window.onload=function(){ 
 	var cuser = document.getElementById('CurrentUser');
 	var sleep=document.getElementById('SleepTime');
@@ -11,7 +11,20 @@ window.onload=function(){
 		
 		name=localStorage.getItem("username");
 		cuser.innerHTML=cuser.innerHTML+", "+name+"!";
-		sleep.innerHTML="You would like to sleep for "+localStorage.getItem("sleeptime")+" hours.";
+		sleep.innerHTML="You would like to sleep for ";
+		if(localStorage.getItem("sleeptime")!="0"&&localStorage.getItem("sleeptime")!="")
+		{
+			setsleep=localStorage.getItem("sleeptime");
+			myselect=document.getElementById('sleephour').options;
+			for(i=0;i<myselect.length;i++)
+			{
+				if(myselect[i].value==setsleep)
+				{
+					myselect[i].selected=true;
+				}
+			}
+		}
+		
 		reminder.innerHTML="You now have "+localStorage.getItem("remindernub")+" commitments."
 		
 		
@@ -33,20 +46,31 @@ function logout()
 	logouthref.href="index.html";
 	return true;
 }
+function changesleep()
+{
+	myselect=document.getElementById('sleephour').options;
+	var index=myselect.selectedIndex;
+	var value=myselect.options[index].value;
+	localStorage.setItem("sleeptime",value);
+}
 function drawGraphic()
 {
 	arr2=new Array();
 	if(localStorage.getItem("sleeptime")!="0"&&localStorage.getItem("sleeptime")!="")
 	{
+		sleeptime=Math.round(Math.random()*5+5);
 		var seed=0;
 		for(var i = 0; i < 7;i++)
 	   { 
-		seed=Math.round(Math.random())
+		seed=Math.round(Math.random()*10);
 		arr2[i]=5*seed;
+		arr2[i]=(arr2[i]/(sleeptime*60));
+		
 	   }
 	}
 	else
 	{
+		sleeptime=0;
 		for(var i = 0; i < 7;i++)
 	   { 
 		arr2[i]=0;
@@ -101,6 +125,7 @@ datasets : [
     animationEasing : "easeOutQuart",    
     onAnimationComplete : null,
 	tooltipFontSize: 40,
+	tooltipTemplate: "<%if (label){%><%=label%>:sleep:"+sleeptime+"h,snooze:<%}%><%=Math.round(value*8*60)%>"+"min"
     }
 	
 }

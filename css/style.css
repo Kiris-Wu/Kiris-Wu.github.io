@@ -159,7 +159,14 @@ h1 {
 	color:	#808080;
 	font-weight:normal;
 }
-
+.noti3{
+	font-size:330%;
+	font-weight:normal;
+}
+.noti4{
+	font-size:350%;
+	font-weight:normal;
+}
 .welcome{
 	font-size:400%;
 }
@@ -345,4 +352,16 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 400%;
+}
+.selecth{
+width:100px;
+height:80px;
+font-size:350%;
+}
+.selecth option{
+font-size:40%
+}
+.logout{
+margin-left:650px;
+font-size:110%
 }
