@@ -42,10 +42,10 @@ function saveclick()
 	var newprep = document.createElement("div");
 	newprep.className="commitment-prep";
 	if (p.value==1){
-		newprep.innerHTML="Prep Time: "+p.value+" Hour";
+		newprep.innerHTML="Prep Time: "+p.value+" Minute";
 	}
 	else	{
-		newprep.innerHTML="Prep Time: "+p.value+" Hours";
+		newprep.innerHTML="Prep Time: "+p.value+" Minutes";
 	}
 	newdiv.appendChild(newprep);
 	
