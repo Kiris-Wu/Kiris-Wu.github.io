@@ -43,11 +43,93 @@ function reminderchange()
 	reminder.innerHTML="You now have "+localStorage.getItem("remindernub")+" commitments."
 	
 }
+function drawCommit()
+{
+	if(localStorage.getItem("remindernub")=="0")
+	{
+		var label=document.createElement("label");
+		label.style.fontSize="400%";
+		label.id="Nonrmd";
+		label.innerHTML="No Commitment Now!"
+		var comm = document.getElementById("comm");
+		comm.appendChild(label);
+	}
+	else
+	{
+	var n=localStorage.getItem("commitname");
+	var t=localStorage.getItem("committime");
+	var p=localStorage.getItem("preptime");
+	var nub=parseInt(localStorage.getItem("remindernub"));
+	
+	for(i=1;i<=nub;i++)
+	{
+		if(nub==1)
+		{
+		nvalue=n;
+		tvalue=t;
+		pvalue=p;
+		}
+		else
+		{
+		var nsplit=n.split(";");
+		var tsplit=t.split(";");
+		var psplit=p.split(";");
+		nvalue=nsplit[i];
+		tvalue=tsplit[i];
+		pvalue=psplit[i];	
+		}
+		
+	var newdiv = document.createElement("div");
+	newdiv.className="commitment-wrapper";
+	
+	var comm = document.getElementById("comm");
+	comm.appendChild(newdiv);
+	
+	var button2 = document.createElement("div");
+	button2.className="commitment-button2";
+	button2.innerHTML="A";
+	button2.setAttribute("onClick", "onAlarm()");
+	newdiv.appendChild(button2);
+	
+	var button = document.createElement("div");
+	button.className="commitment-button";
+	button.innerHTML="On";
+	button.setAttribute("onClick", "javascript: onoffswitch(this);");
+	newdiv.appendChild(button);
+	
+	var newname = document.createElement("div");
+	newname.className="commitment-name";
+	newname.innerHTML="<b>"+nvalue+"</b>";
+	newdiv.appendChild(newname);
+	
+	var newtime = document.createElement("div");
+	newtime.className="commitment-time";
+	newtime.innerHTML="Time: "+tvalue;
+	newdiv.appendChild(newtime);
+	
+	var newprep = document.createElement("div");
+	newprep.className="commitment-prep";
+	if (p.value==1){
+		newprep.innerHTML="Prep Time: "+pvalue+" Minute";
+	}
+	else	{
+		newprep.innerHTML="Prep Time: "+pvalue+" Minutes";
+	}
+	newdiv.appendChild(newprep);
+	}
+	}
+	
+	
+	
+}
 function logout()
 {
 	localStorage.setItem("username","");
 	localStorage.setItem("remindernub","");
 	localStorage.setItem("sleeptime","");
+	localStorage.setItem("commitname","");
+	localStorage.setItem("committime","");
+	localStorage.setItem("preptime","");
 	var logouthref=document.getElementById("logout");
 	logouthref.href="index.html";
 	return true;

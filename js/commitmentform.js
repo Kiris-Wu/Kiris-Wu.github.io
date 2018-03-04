@@ -17,11 +17,35 @@ function saveclick()
 	var t = document.getElementById("time");
 	var p = document.getElementById("prep");
 	
+	//save in stroage
+	var nub=parseInt(localStorage.getItem("remindernub"));
+	if(nub==0)
+	{
+	localStorage.setItem("commitname",n.value);
+	localStorage.setItem("committime",t.value);
+	localStorage.setItem("preptime",p.value);
+	}
+	else
+	{
+		var pn=localStorage.getItem("commitname")+";"+n.value;
+		var pt=localStorage.getItem("committime")+";"+t.value;
+		var pp=localStorage.getItem("preptime")+";"+p.value;
+		localStorage.setItem("commitname",pn);
+		localStorage.setItem("committime",pt);
+		localStorage.setItem("preptime",pp);
+	}
+	
 	var newdiv = document.createElement("div");
 	newdiv.className="commitment-wrapper";
 	
 	var comm = document.getElementById("comm");
 	comm.appendChild(newdiv);
+	
+	var button2 = document.createElement("div");
+	button2.className="commitment-button2";
+	button2.innerHTML="A";
+	button2.setAttribute("onClick", "onAlarm()");
+	newdiv.appendChild(button2);
 	
 	var button = document.createElement("div");
 	button.className="commitment-button";
@@ -50,6 +74,8 @@ function saveclick()
 	newdiv.appendChild(newprep);
 	
 	
+	
+	
 	//exchange display
 	var comm=document.getElementById('comm');
 	comm.style.display="block";
@@ -60,7 +86,11 @@ function saveclick()
 	var reminder=parseInt(localStorage.getItem("remindernub"));
 	reminder=reminder+1;
 	localStorage.setItem("remindernub",reminder);
-	
+	var nonrmdl=document.getElementById('Nonrmd');
+	if(nonrmdl!="")
+	{
+		nonrmdl.style.display="none";
+	}
 	
 	
 }
@@ -85,4 +115,8 @@ function onoffswitch(elem){
 		elem.innerHTML="On";
 		elem.style.backgroundColor="Green";
 	}
+}
+function onAlarm()
+{
+	location.href="alarm.html";
 }
