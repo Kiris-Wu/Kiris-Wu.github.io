@@ -57,6 +57,9 @@ function saveclick()
 	plus.style.display="block";
 	var form=document.getElementById('rmdform');
 	form.style.display="none";
+	var reminder=parseInt(localStorage.getItem("remindernub"));
+	reminder=reminder+1;
+	localStorage.setItem("remindernub",reminder);
 	
 	
 	

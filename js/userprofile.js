@@ -37,6 +37,12 @@ window.onload=function(){
 	var ctx = document.getElementById("snooze").getContext("2d");
     mychart = new Chart(ctx).Line(lineChartData,defaults); 
 }
+function reminderchange()
+{
+	var reminder=document.getElementById('ReminderNub');
+	reminder.innerHTML="You now have "+localStorage.getItem("remindernub")+" commitments."
+	
+}
 function logout()
 {
 	localStorage.setItem("username","");

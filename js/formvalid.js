@@ -3,7 +3,7 @@ var Password = ["finalfantasy13","15finalfantasy","test123"];
 var Phone = ["7733720406","3720406773","1234567890"];
 var Email = ["Lightning@gmail.com","Chocobo@gmail.com","test@test.com"];
 var Userid=["u01,u02,u03"];
-var ReminderNub=[3,2,0];
+var ReminderNub=[0,0,0];
 var Sleeptime=[8,7,6];
 function checkLogin(){ 
   var entity = document.getElementById('entity').value; 
