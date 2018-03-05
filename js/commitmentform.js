@@ -16,9 +16,24 @@ function saveclick()
 	var n = document.getElementById("name");
 	var t = document.getElementById("time");
 	var p = document.getElementById("prep");
-	var apselect=document.getElementById("apm");
-	var apindex=apselect.selectedIndex;
-	var ap=" "+apselect.options[apindex].value;
+	// var apselect=document.getElementById("apm");
+	// var apindex=apselect.selectedIndex;
+	// var ap=" "+apselect.options[apindex].value;
+	var hour = parseInt(t.value.split(":")[0]);
+	var minute = t.value.split(":")[1];
+	if(hour > 11) {
+		var ap = "pm";
+	} else {
+		var ap = "am";
+	}
+
+	if(hour == 0) {
+		hour = 12;
+	}
+	if(hour>12){
+		hour = hour - 12;
+	}
+
 	var datef=document.getElementsByName("date");
 	var datetxt="";
 	for (var x = 0; x < datef.length; x++) {  
@@ -58,14 +73,14 @@ function saveclick()
 	if(nub==0)
 	{
 	localStorage.setItem("commitname",n.value);
-	localStorage.setItem("committime",t.value+ap);
+	localStorage.setItem("committime",hour+":"+minute+ap);
 	localStorage.setItem("preptime",p.value);
 	localStorage.setItem("datefn",datetxt);
 	}
 	else
 	{
 		var pn=localStorage.getItem("commitname")+";"+n.value;
-		var pt=localStorage.getItem("committime")+";"+t.value+ap;
+		var pt=localStorage.getItem("committime")+";"+hour+":"+minute+ap;
 		var pp=localStorage.getItem("preptime")+";"+p.value;
 		var df=localStorage.getItem("datefn")+";"+datetxt;
 		localStorage.setItem("commitname",pn);
@@ -100,7 +115,7 @@ function saveclick()
 	
 	var newtime = document.createElement("div");
 	newtime.className="commitment-time";
-	newtime.innerHTML="Time: "+t.value+ap;
+	newtime.innerHTML="Time: "+hour+":"+minute+ap;
 	newdiv.appendChild(newtime);
 	
 	var newprep = document.createElement("div");
