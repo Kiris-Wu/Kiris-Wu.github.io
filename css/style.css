@@ -221,10 +221,14 @@ h1 {
   border-width: 2px;
 }
 
-.commitment-img img{
+.commitment-img {
 	float: center;
-	height: 30vh;
-	width: auto;
+	height: 20vh;
+	background-image: url("../images/sun2.png");
+	background-size: auto,100%;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: fi
 	padding: 15px;
 }
 
