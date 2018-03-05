@@ -16,27 +16,67 @@ function saveclick()
 	var n = document.getElementById("name");
 	var t = document.getElementById("time");
 	var p = document.getElementById("prep");
+	var apselect=document.getElementById("apm");
+	var apindex=apselect.selectedIndex;
+	var ap=" "+apselect.options[apindex].value;
+	var datef=document.getElementsByName("date");
+	var datetxt="";
+	for (var x = 0; x < datef.length; x++) {  
+                    if(datef[x].checked) 
+					{
+						datetxt=datetxt+datef[x].value+" ";
+					}
+                } 
+	//validation
+	if(n.value=="")
+	{
+		 var notice=document.getElementById('comtname');
+		  notice.innerHTML="Please enter the name of the commitment.";
+		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
+		  return ;
+	}
+	if(p.value=="")
+	{
+		var notice=document.getElementById('comtpt');
+		  notice.innerHTML="Please enter the preparation time of the commitment.";
+		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
+		  return ;
+	}
+	if(datetxt=="")
+	{
+		var notice=document.getElementById('comtck');
+		  notice.innerHTML="Please check at least one of the date.";
+		  notice.style.color="#DC143C";
+		  notice.removeAttribute("hidden");
+		  return ;
+	}
 	
 	//save in stroage
 	var nub=parseInt(localStorage.getItem("remindernub"));
 	if(nub==0)
 	{
 	localStorage.setItem("commitname",n.value);
-	localStorage.setItem("committime",t.value);
+	localStorage.setItem("committime",t.value+ap);
 	localStorage.setItem("preptime",p.value);
+	localStorage.setItem("datefn",datetxt);
 	}
 	else
 	{
 		var pn=localStorage.getItem("commitname")+";"+n.value;
-		var pt=localStorage.getItem("committime")+";"+t.value;
+		var pt=localStorage.getItem("committime")+";"+t.value+ap;
 		var pp=localStorage.getItem("preptime")+";"+p.value;
+		var df=localStorage.getItem("datefn")+";"+datetxt;
 		localStorage.setItem("commitname",pn);
 		localStorage.setItem("committime",pt);
 		localStorage.setItem("preptime",pp);
+		localStorage.setItem("datefn",df);
 	}
 	
 	var newdiv = document.createElement("div");
 	newdiv.className="commitment-wrapper";
+	newdiv.setAttribute("name","cmlist");
 	
 	var comm = document.getElementById("comm");
 	comm.appendChild(newdiv);
@@ -60,7 +100,7 @@ function saveclick()
 	
 	var newtime = document.createElement("div");
 	newtime.className="commitment-time";
-	newtime.innerHTML="Time: "+t.value;
+	newtime.innerHTML="Time: "+t.value+ap;
 	newdiv.appendChild(newtime);
 	
 	var newprep = document.createElement("div");
@@ -73,7 +113,10 @@ function saveclick()
 	}
 	newdiv.appendChild(newprep);
 	
-	
+	var newdate = document.createElement("div");
+	newdate.className="commitment-date";
+	newdate.innerHTML=datetxt;
+	newdiv.appendChild(newdate);
 	
 	
 	//exchange display
@@ -118,5 +161,6 @@ function onoffswitch(elem){
 }
 function onAlarm()
 {
+	
 	location.href="alarm.html";
 }
