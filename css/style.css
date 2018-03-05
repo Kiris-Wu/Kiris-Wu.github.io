@@ -222,11 +222,9 @@ h1 {
 }
 
 .commitment-placeholder{
-	background-image: url("../images/sun2.png");
-	background-position: center;
 	text-align: center;
 	margin: auto;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 .commitment-button{
