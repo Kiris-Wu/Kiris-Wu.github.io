@@ -45,6 +45,8 @@ function reminderchange()
 }
 function drawCommit()
 {
+	
+	
 	if(localStorage.getItem("remindernub")=="0")
 	{
 		var label=document.createElement("label");
@@ -56,9 +58,18 @@ function drawCommit()
 	}
 	else
 	{
+	var node=document.getElementsByName("cmlist");
+	var listnub=node.length;
+	var rmdnub=parseInt(localStorage.getItem("remindernub"));
+	if(listnub==rmdnub)
+	{
+		return;
+	}
+	
 	var n=localStorage.getItem("commitname");
 	var t=localStorage.getItem("committime");
 	var p=localStorage.getItem("preptime");
+	var df=localStorage.getItem("datefn");
 	var nub=parseInt(localStorage.getItem("remindernub"));
 	
 	for(i=1;i<=nub;i++)
@@ -68,19 +79,23 @@ function drawCommit()
 		nvalue=n;
 		tvalue=t;
 		pvalue=p;
+		dfvalue=df;
 		}
 		else
 		{
 		var nsplit=n.split(";");
 		var tsplit=t.split(";");
 		var psplit=p.split(";");
+		var dfsplit=df.split(";");
 		nvalue=nsplit[i];
 		tvalue=tsplit[i];
-		pvalue=psplit[i];	
+		pvalue=psplit[i];
+		dfvalue=dfsplit[i];
 		}
 		
 	var newdiv = document.createElement("div");
 	newdiv.className="commitment-wrapper";
+	newdiv.setAttribute("name","cmlist");
 	
 	var comm = document.getElementById("comm");
 	comm.appendChild(newdiv);
@@ -116,6 +131,13 @@ function drawCommit()
 		newprep.innerHTML="Prep Time: "+pvalue+" Minutes";
 	}
 	newdiv.appendChild(newprep);
+	
+	var newdate = document.createElement("div");
+	newdate.className="commitment-date";
+	newdate.innerHTML=dfvalue;
+	newdiv.appendChild(newdate);
+	
+	
 	}
 	}
 	

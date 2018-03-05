@@ -1,6 +1,8 @@
 // to set the interface in onload()
 
-
+window.onload=function(){
+	
+}
 
 function redirect()
 {

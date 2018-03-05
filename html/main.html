@@ -31,7 +31,8 @@
 				<hr>
 				<div class="info">
 					<label id="ReminderNub" class="noti3"></label><br/><br/><br/>
-					<label id="SleepTime" class="noti3"></label><select id="sleephour" class="selecth" onchange="changesleep()">
+					<label id="SleepTime" class="noti3"></label>&nbsp&nbsp
+					<select id="sleephour" class="selecth" onchange="changesleep()">
 					<option value="5">5h</option>
 					<option value="6">6h</option>
 					<option value="7">7h</option>
@@ -53,16 +54,35 @@
 							<div class="form-group">
 								<label class="mc-form" for="usr">Morning Commitment:</label>
 								<input type="text" class="form-control" id="name" placeholder="e.g. Morning Yoga">
+								<label class="noti" id="comtname" hidden></label>
 							</div>
 							<div class="form-group">
 								<label class="mc-form" for="usr">Start Time of Commitment:</label>
 								<!-- <input type="text" class="form-control" id="usr"> -->
-								<input id="time" type="time" value="08:00">
+								<input id="time" type="time" value="08:00">&nbsp&nbsp<select id="apm" class="selecth">
+							<option value="a.m." selected>a.m.</option>
+							<option value="p.m.">p.m.</option>
+							</select>
 							</div>
 							<div class="form-group">
 								<label class="mc-form" for="usr">Preparation Time (Minutes): </label>
 								<input type="number" class="form-control" id="prep" placeholder="30">
+								<label class="noti" id="comtpt" hidden></label>
 							</div>
+							<div class="form-group">
+								<label class="mc-form" for="usr">Check the commitment frequency: </label>
+							</div>
+							
+								<input type="checkbox" class="checkbox" value="Mon" name="date" id="Mon"><label for="Mon" class="noti5">Mon</label>
+								<input type="checkbox" class="checkbox" value="Tu" name="date" id="Tu"><label class="noti5" for="Tu">Tu</label>
+								<input type="checkbox" class="checkbox" value="Wed" name="date" id="Wed"><label for="Wed" class="noti5">Wed</label>
+								<input type="checkbox" class="checkbox" value="Th" name="date" id="Th"><label class="noti5" for="Th">Th</label>
+								<input type="checkbox" class="checkbox" value="Fri" name="date" id="Fri"><label for="Fri" class="noti5">Fri</label><br>
+								<input type="checkbox" class="checkbox" value="Sat" name="date" id="Sat"><label class="noti5" for="Sat">Sat</label>
+								<input type="checkbox" class="checkbox" value="Sun" name="date" id="Sun"><label for="Sun" class="noti5">Sun</label><br>
+								<label class="noti" id="comtck" hidden></label>
+								
+							
 
 
 			</div><!-- //form-content -->
