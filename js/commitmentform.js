@@ -3,6 +3,8 @@ function addreminder()
 {
 	var nocommit=document.getElementById("Nonrmd")
 	nocommit.style.display = "none";
+	var noimage=document.getElementById('imgnone');
+	noimage.style.display="none";
 	console.log(nocommit)
 	var comm=document.getElementById('comm');
 	comm.style.display="none";
@@ -10,6 +12,7 @@ function addreminder()
 	plus.style.display="none";
 	var form=document.getElementById('rmdform');
 	form.style.display="block";
+
 	
 }
 
@@ -148,9 +151,11 @@ function saveclick()
 	reminder=reminder+1;
 	localStorage.setItem("remindernub",reminder);
 	var nonrmdl=document.getElementById('Nonrmd');
+	var noimage1=document.getElementById('imgnone');
 	if(nonrmdl!="")
 	{
 		nonrmdl.style.display="none";
+		noimage1.style.display="none";
 	}
 	
 	
@@ -169,6 +174,8 @@ function cancelclick()
 	{
 		var nocommit=document.getElementById("Nonrmd")
 		nocommit.style.display = "block";
+		var noimage=document.getElementById('imgnone');
+		noimage.style.display = "block";
 	}
 }
 
