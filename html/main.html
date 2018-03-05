@@ -16,90 +16,90 @@
 <body>
 <!-- 	<div style="text-align:center;clear:both">
 
-	</div> -->
-	<div class="tab-wrapper">
+</div> -->
+<div class="tab-wrapper">
 
-		<ul class="tab-menu">
-			<li class="active" id="tab1" onclick="reminderchange()">User Profile</li>
-			<li id="tab2" onclick="drawCommit()">Morning Commitment</li>
-		</ul>
+	<ul class="tab-menu">
+		<li class="active" id="tab1" onclick="reminderchange()">User Profile</li>
+		<li id="tab2" onclick="drawCommit()">Morning Commitment</li>
+	</ul>
 
-		<div class="tab-content">
-			<!-- //content shows in the first Tab -->
-			<div class="profile">
-				<img src="../images/head_m.jpg"/>&nbsp&nbsp<label id="CurrentUser" class="welcome">Welcome</label><a onclick="return logout()" id="logout"><br><label class="logout">Log out</label></a></br>	
-				<hr>
-				<div class="info">
-					<label id="ReminderNub" class="noti3"></label><br/><br/><br/>
-					<label id="SleepTime" class="noti3"></label><select id="sleephour" class="selecth" onchange="changesleep()">
+	<div class="tab-content">
+		<!-- //content shows in the first Tab -->
+		<div class="profile">
+			<img src="../images/head_m.jpg"/>&nbsp&nbsp<label id="CurrentUser" class="welcome">Welcome</label><a onclick="return logout()" id="logout"><br><label class="logout">Log out</label></a></br>	
+			<hr>
+			<div class="info">
+				<label id="ReminderNub" class="noti3"></label><br/><br/><br/>
+				<label id="SleepTime" class="noti3"></label><select id="sleephour" class="selecth" onchange="changesleep()">
 					<option value="5">5h</option>
 					<option value="6">6h</option>
 					<option value="7">7h</option>
 					<option value="8">8h</option>
 					<option value="9">9h</option>
 					<option value="10">10h</option>
-					</select><br/><br/><br/>
-					<label class="noti4">Snooze-Sleep Graphic</label><br/>
-					<label class="noti2">Notice: The graphic shows the ratio of snooze time to sleep time last week. Click on points for detailed sleep and snooze time.</label><br/>
-					<canvas id="snooze" width="750" height="700"></canvas>
-					</div>
-				</div>
-				
-				<!-- //content shows in the Second Tab -->
-				<div class="commitment">
-					<div class="comm-holder" id="comm"></div>
-					<div class="outer" id="rmdform">
-						<div class="form-content">
-							<div class="form-group">
-								<label class="mc-form" for="usr">Morning Commitment:</label>
-								<input type="text" class="form-control" id="name" placeholder="e.g. Morning Yoga">
-							</div>
-							<div class="form-group">
-								<label class="mc-form" for="usr">Start Time of Commitment:</label>
-								<!-- <input type="text" class="form-control" id="usr"> -->
-								<input id="time" type="time" value="08:00">
-							</div>
-							<div class="form-group">
-								<label class="mc-form" for="usr">Preparation Time (Minutes): </label>
-								<input type="number" class="form-control" id="prep" placeholder="30">
-							</div>
-
-
-			</div><!-- //form-content -->
-
-			<div class="morning-group">
-				<label class="col-md-3 control-label"></label>
-				<div class="col-md-8">
-					<input type="reset" class="btn btn-default" value="Cancel" onclick="return cancelclick()">
-					&nbsp&nbsp
-					<input type="submit" class="btn btn-primary" value="Save" onclick="return saveclick()">
-
-				</div>
+				</select><br/><br/><br/>
+				<label class="noti4">Snooze-Sleep Graphic</label><br/>
+				<label class="noti2">Notice: The graphic shows the ratio of snooze time to sleep time last week. Click on points for detailed sleep and snooze time.</label><br/>
+				<canvas id="snooze" width="750" height="700"></canvas>
 			</div>
 		</div>
-					<div class="button-bar">
-			
-						<img id="plusbtn" class="button-art" src="../images/add_button.jpg" onclick="addreminder()"/>
-						
+
+		<!-- //content shows in the Second Tab -->
+		<div class="commitment">
+			<div class="comm-holder" id="comm"></div>
+			<div class="outer" id="rmdform">
+				<div class="form-content">
+					<div class="form-group2">
+						<label class="mc-form" for="usr">Morning Commitment:</label>
+						<input type="text" class="form-control" id="name" placeholder="e.g. Morning Yoga">
+					</div>
+					<div class="form-group2">
+						<label class="mc-form" for="usr">Start Time of Commitment:</label>
+						<!-- <input type="text" class="form-control" id="usr"> -->
+						<input id="time" type="time" value="08:00">
+					</div>
+					<div class="form-group2">
+						<label class="mc-form" for="usr">Preparation Time (Minutes): </label>
+						<input type="number" class="form-control" id="prep" placeholder="30">
 					</div>
 
+
+				</div><!-- //form-content -->
+
+				<div class="morning-group">
+					<label class="col-md-3 control-label"></label>
+					<div class="col-md-8">
+						<input type="reset" class="btn btn-default" value="Cancel" onclick="return cancelclick()">
+						&nbsp&nbsp
+						<input type="submit" class="btn btn-primary" value="Save" onclick="return saveclick()">
+
+					</div>
 				</div>
+			</div>
+			<div class="button-bar">
+
+				<img id="plusbtn" class="button-art" src="../images/add-new2.png" onclick="addreminder()"/>
+
+			</div>
+
+		</div>
 		
 
-			</div><!-- //tab-content -->
+	</div><!-- //tab-content -->
 
-		</div><!-- //tab-wrapper -->
+</div><!-- //tab-wrapper -->
 
 
 
-	</div><!-- //tab-wrapper -->
-	<script src='../js/jquery.min.js'></script>
-	<script  src="../js/formvalid.js"></script>
-	<script  src="../js/userprofile.js"></script>
-	<script  src="../js/index.js"></script>
-	<script  src="../js/Chart.js"></script>
-	<script  src="../js/commitmentform.js"></script>
-	
+</div><!-- //tab-wrapper -->
+<script src='../js/jquery.min.js'></script>
+<script  src="../js/formvalid.js"></script>
+<script  src="../js/userprofile.js"></script>
+<script  src="../js/index.js"></script>
+<script  src="../js/Chart.js"></script>
+<script  src="../js/commitmentform.js"></script>
+
 
 </body>
 </html>
