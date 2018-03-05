@@ -224,16 +224,16 @@ h1 {
 .commitment-placeholder{
 	text-align: center;
 	margin: auto;
-	font-size: 18px;
+	font-size: 20%;
 	height: 100%;
 	width: 100%
 }
 
 .commitment-img img{
 	float: center;
-	height: 80%;
+	height: 70%;
 	width: auto;
-	padding: 5px;
+	padding: 5%;
 }
 
 .commitment-button{
