@@ -1,6 +1,9 @@
 
 function addreminder()
 {
+	var nocommit=document.getElementById("Nonrmd")
+	nocommit.style.display = "none";
+	console.log(nocommit)
 	var comm=document.getElementById('comm');
 	comm.style.display="none";
 	var plus=document.getElementById('plusbtn');
@@ -162,6 +165,11 @@ function cancelclick()
 	plus.style.display="block";
 	var form=document.getElementById('rmdform');
 	form.style.display="none";
+	if(localStorage.getItem("remindernub")=="0")
+	{
+		var nocommit=document.getElementById("Nonrmd")
+		nocommit.style.display = "block";
+	}
 }
 
 function onoffswitch(elem){
