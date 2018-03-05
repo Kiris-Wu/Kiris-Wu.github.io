@@ -221,19 +221,11 @@ h1 {
   border-width: 2px;
 }
 
-.commitment-placeholder{
-	text-align: center;
-	margin: auto;
-	font-size: 20%;
-	height: 100%;
-	width: 100%
-}
-
 .commitment-img img{
 	float: center;
-	height: 70%;
+	height: 30vh;
 	width: auto;
-	padding: 5%;
+	padding: 15px;
 }
 
 .commitment-button{
