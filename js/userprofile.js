@@ -150,15 +150,14 @@ function drawCommit()
 }
 function logout()
 {
+	location.href="index.html";
 	localStorage.setItem("username","");
 	localStorage.setItem("remindernub","");
 	localStorage.setItem("sleeptime","");
 	localStorage.setItem("commitname","");
 	localStorage.setItem("committime","");
 	localStorage.setItem("preptime","");
-	var logouthref=document.getElementById("logout");
-	logouthref.href="index.html";
-	return true;
+	
 }
 function changesleep()
 {
@@ -203,14 +202,17 @@ datasets : [
 	strokeColor : "rgba(151,187,205,1)",
 	pointColor : "rgba(151,187,205,1)",
 	pointStrokeColor : "#fff",
-        data : []    //data for x
+        data : []    
     }
+
     ]
 }
 
 for(var i = 0; i < arr2.length;i++)
 { 
 	lineChartData.datasets[0].data.push(arr2[i]);
+	
+	
 }
 
 //定义图表的参数   

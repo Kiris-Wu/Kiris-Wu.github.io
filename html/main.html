@@ -19,16 +19,21 @@
 <div class="tab-wrapper">
 
 	<ul class="tab-menu">
-		<li class="active" id="tab1" onclick="reminderchange()">User Profile</li>
-		<li id="tab2" onclick="drawCommit()">Morning Commitment</li>
+		<li class="active" id="tab1" onclick="reminderchange()">Profile</li>
+		<li id="tab2" onclick="drawCommit()">Commitment</li>
+		<li onclick="logout()">Logout</li>
 	</ul>
 
 	<div class="tab-content">
 		<!-- //content shows in the first Tab -->
 		<div class="profile">
-			<img src="../images/head_m.jpg"/>&nbsp&nbsp<label id="CurrentUser" class="welcome">Welcome</label><a onclick="return logout()" id="logout"><br><label class="logout">Log out</label></a></br>	
+			<img src="../images/head_m.jpg"/>&nbsp&nbsp<label id="CurrentUser" class="welcome">Welcome</label></br>	
 			<hr>
 			<div class="info">
+				<canvas id="snooze" width="750" height="700"></canvas>
+				<br/>
+				<label class="noti2">Notice: The graphic shows the ratio of snooze time to sleep time last week. Click on points for detailed sleep and snooze time.</label><br/><br/><br/>
+				
 				<label id="ReminderNub" class="noti3"></label><br/><br/><br/>
 				<label id="SleepTime" class="noti3"></label>&nbsp&nbsp
 				<select id="sleephour" class="selecth" onchange="changesleep()">
@@ -39,9 +44,7 @@
 					<option value="9">9h</option>
 					<option value="10">10h</option>
 				</select><br/><br/><br/>
-				<label class="noti4">Snooze-Sleep Graphic</label><br/>
-				<label class="noti2">Notice: The graphic shows the ratio of snooze time to sleep time last week. Click on points for detailed sleep and snooze time.</label><br/>
-				<canvas id="snooze" width="750" height="700"></canvas>
+				
 			</div>
 		</div>
 
@@ -49,7 +52,7 @@
 		<div class="commitment">
 			<div class="comm-holder" id="comm"></div>
 				<div class="commitment-img" id="imgnone"></div>
-				<div id="Nonrmd" style="font-size:200%;text-align:center;">Commitments you add will show up here.</div>
+				<div id="Nonrmd" style="font-size:320%;text-align:center;">Commitments you add will show up here.</div>
 			<div class="outer" id="rmdform">
 				<div class="form-content">
 					<div class="form-group2">
