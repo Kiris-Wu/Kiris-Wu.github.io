@@ -35,7 +35,34 @@ window.onload=function(){
 	drawGraphic();
 	var canvas=document.getElementById("snooze")
 	var ctx = document.getElementById("snooze").getContext("2d");
-	mychart = new Chart(ctx).Line(lineChartData,defaults); 
+	
+	Chart.types.Line.extend({
+    name: "LineWithLine",
+    initialize: function () {
+        Chart.types.Line.prototype.initialize.apply(this, arguments);
+    },
+    draw: function () {
+        Chart.types.Line.prototype.draw.apply(this, arguments);
+        var scale = this.scale
+        console.log(this);
+
+        // draw line
+        this.chart.ctx.beginPath();
+        this.chart.ctx.moveTo(scale.startPoint+12, 450);
+        this.chart.ctx.strokeStyle = '#ff0000';
+        this.chart.ctx.lineTo(this.chart.width, 450);
+        this.chart.ctx.stroke();
+
+        // write Oversleep
+        this.chart.ctx.textAlign = 'right';
+		this.chart.ctx.fillStyle = 'red';
+        this.chart.ctx.fillText("Oversleep", this.chart.width-40, 410);
+    }
+});
+
+mychart=new Chart(ctx).LineWithLine(lineChartData,defaults);
+//	mychart = new Chart(ctx).Line(lineChartData,defaults); 
+	
 }
 function reminderchange()
 {
@@ -204,7 +231,6 @@ datasets : [
 	pointStrokeColor : "#fff",
         data : []    
     }
-
     ]
 }
 
@@ -216,7 +242,8 @@ for(var i = 0; i < arr2.length;i++)
 }
 
 //定义图表的参数   
-defaults = {    
+defaults = {  
+	lineAtIndex: 2,
     scaleStartValue :null,     // start y value
     scaleLineColor : "rgba(0,0,0,.1)",    // color for Y/X 
     scaleLineWidth : 3,        // width for X,Y
@@ -241,7 +268,7 @@ defaults = {
     animationEasing : "easeOutQuart",    
     onAnimationComplete : null,
     tooltipFontSize: 40,
-    tooltipTemplate: "<%if (label){%><%=label%>:sleep:"+sleeptime+"h,snooze:<%}%><%=Math.round(value*8*60)%>"+"min"
+    tooltipTemplate: "<%if (label){%><%=label%>:sleep:"+sleeptime+"h,snooze:<%}%><%=Math.round(value*sleeptime*60)%>"+"min"
 }
 
 }
