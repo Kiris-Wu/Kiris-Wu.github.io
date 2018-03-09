@@ -21,17 +21,21 @@ h1 {
 }
 
 .tab-menu{
+position:fixed;
+	bottom:0;
+	width:100%;
   display: flex;
   justify-content: space-between;
+   z-index:9999
 }
 
 .tab-menu li {
   position:relative;
-  background-color: #fff;
+  background-color: 	#E6E6FA;
   color:#bcbcbc;
   display: inline-block;
   /*padding: 20px 40px;*/
-  opacity: 0.8;
+  opacity: 1;
   cursor:pointer;
   z-index:0;
 
@@ -66,7 +70,7 @@ h1 {
   width: 0;
   height: 10%;
   background-color: #2e6da4;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
@@ -182,6 +186,7 @@ h1 {
 
 #logout {
   font-size: 300%;
+  float:right;
 }
 
 
@@ -310,7 +315,7 @@ font-size:35px;
   /*float: right;*/
   position: fixed;
   /*position:sticky;*/
-  bottom: 5%;
+  bottom: 6%;
   right: 5%;
   height: 150px;
   text-align: right;

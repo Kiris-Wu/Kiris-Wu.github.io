@@ -20,19 +20,19 @@
 
 	<ul class="tab-menu">
 		<li class="active" id="tab1" onclick="reminderchange()">Profile</li>
-		<li id="tab2" onclick="drawCommit()">Commitment</li>
-		<li onclick="logout()">Logout</li>
+		<li id="tab2" onclick="drawCommit()">Commitments</li>
 	</ul>
 
 	<div class="tab-content">
 		<!-- //content shows in the first Tab -->
 		<div class="profile">
+			<a id="logout" onclick="logout()"><label>Logout</label></a>
 			<img src="../images/head_m.jpg"/>&nbsp&nbsp<label id="CurrentUser" class="welcome">Welcome</label></br>	
 			<hr>
 			<div class="info">
 				<canvas id="snooze" width="750" height="700"></canvas>
 				<br/>
-				<label class="noti2">Notice: The graphic shows the ratio of snooze time to sleep time last week. Click on points for detailed sleep and snooze time.</label><br/><br/><br/>
+				<label class="noti2">Notice: The graphic shows the ratio of snooze time to sleep time last week. Click on points for detailed sleep and snooze time.</label><br/><br/>
 				
 				<label id="ReminderNub" class="noti3"></label><br/><br/><br/>
 				<label id="SleepTime" class="noti3"></label>&nbsp&nbsp
@@ -102,11 +102,13 @@
 			<div class="button-bar">
 
 				<img id="plusbtn" class="button-art" src="../images/add-new2.png" onclick="addreminder()"/>
-
+				
 			</div>
 
 		</div><!-- //tab-content -->
-
+	
+		
+	
 	</div><!-- //tab-wrapper -->
 
 
