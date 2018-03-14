@@ -84,11 +84,18 @@ function drawCommit()
 		// comm.appendChild(label);
 		var nocommit=document.getElementById("Nonrmd")
 		nocommit.style.display = "block";
+		var nocommitimg=document.getElementById("imgnone")
+		nocommitimg.style.display = "block";
 
 	}
 	else
 	{
+		
+		var nocommit=document.getElementById("Nonrmd")
 		nocommit.style.display = "none";
+		var nocommitimg=document.getElementById("imgnone")
+		nocommitimg.style.display = "none";
+		
 		var node=document.getElementsByName("cmlist");
 		var listnub=node.length;
 		var rmdnub=parseInt(localStorage.getItem("remindernub"));
